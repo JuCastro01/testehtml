@@ -1,41 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>Aula 2021-05-14</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href= "style.css">
+
   </head>
+
   <body>
-    <h1>Very intelligent age checker</h1>
-    <label>Age</label>
-    <input type="number" step="1" placeholder="0">
-    <button onclick="checkAge()">check my age</button>
-    <p>See the result here.</p>
-    <p>
-      aaaaaaaaaa teste
-    
-    </p>
-    <script>
 
-      const input = document.querySelector("input")
-      const p = document.querySelector("p")
+    <center> <!-centraliza a tela ->
 
-      function checkAge() {
-        // get the age number
-        const age = parseInt(input.value)
+      <div class="menu">
+        <h1>Very intelligent age checker</h1>
+        <label>Age</label>
+        <input type="number" step="1" placeholder="0">
+        <button onclick="checkAge()">check my age</button>
+        <p>See the result here.</p>
+      </div>
 
-        // check the age
-        let adult = false
-        if (age > 17) {
-          adult = true
-        }
+    <script src="script.js" ></script>
 
-        // send the message
-        if (adult) {
-          p.innerText = "You are a adult!"
-        } else {
-          p.innerText = "Go back to your mom"
-        }
-      }
-    </script>
+    </center>
+
   </body>
+
 </html>
