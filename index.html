@@ -1,29 +1,75 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+  <title>My custom dashboard</title>
 
-    <title>testandolalalala</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href= "style.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  </head>
+  <script>
+    var netdataTheme = 'slate';
+  </script>
 
-  <body>
+  <!-- Add dashboard.js here! -->
+  <script type="text/javascript" src="http://devbabc.staging.octax.co:8080/dashboard.js"></script>
 
-    <center> <!-centraliza a tela ->
+  <style>
+    .wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
 
-      <div class="menu">
-        <h1>Very intelligent age checker</h1>
-        <label>Age</label>
-        <input type="number" step="1" placeholder="0">
-        <button onclick="checkAge()">check my age</button>
-        <p>See the result here.</p>
-      </div>
+    h1 {
+      margin-bottom: 30px;
+      text-align: center;
+    }
 
-    <script src="script.js" ></script>
+    .charts {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+    }
 
-    </center>
+    .charts > div {
+      margin-bottom: 6rem;
+      position: relative;
+    }
+   </style>
 
-  </body>
+</head>
+<body>
 
+  <main class="wrap">
+
+    <h1>My custom dashboard</h1>
+
+    <div class="charts">
+
+      <!-- Add charts here! -->
+      <div data-netdata="system.cpu"
+           data-after="-300"
+           data-height="250px"
+           data-width="calc(50% - 2rem)"></div>
+      <div data-netdata="apps.cpu"
+           data-after="-300"
+           data-height="250px"
+           data-width="calc(50% - 2rem)"></div>
+      <div data-netdata="groups.cpu"
+           data-after="-300"
+           data-height="250px"
+           data-width="calc(50% - 2rem)"></div>
+      <div data-netdata="users.cpu"
+           data-after="-300"
+           data-height="250px"
+           data-width="calc(50% - 2rem)"></div>
+
+    </div>
+
+  </main>
+
+</body>
 </html>
